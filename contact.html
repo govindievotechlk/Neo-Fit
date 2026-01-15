@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Uplink | NEOFIT</title>
+    <meta name="description" content="Establish a secure connection with NEOFIT Command.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Syne:wght@700;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVIGATION INTERFACE -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-square">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="neofit">NEOFIT</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="performance.html">PERFORMANCE</a>
+                <a href="team.html">ELITE TEAM</a>
+                <a href="program.html">PROGRAM</a>
+                <a href="contact.html" class="active">UPLINK</a>
+            </nav>
+            <a href="join.html" class="btn btn-pill-white">JOIN THE MOVEMENT</a>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- UPLINK HERO -->
+        <section class="uplink-hero">
+            <div class="container">
+                <div class="performance-badge">
+                    <i class="fas fa-satellite-dish"></i>
+                    <span>ENCRYPTED CHANNEL</span>
+                </div>
+                <h1 class="massive-title italic">SECURE <br><span class="cyan-glow-text">UPLINK</span></h1>
+
+                <div class="uplink-grid">
+                    <!-- TRANSMISSION FORM -->
+                    <div class="transmission-box">
+                        <h3 class="italic">TRANSMISSION LOG</h3>
+                        <form class="uplink-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label class="form-label">OPERATIVE ID</label>
+                                <input type="text" class="form-input" placeholder="Identify Yourself">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">FREQUENCY (EMAIL)</label>
+                                <input type="email" class="form-input" placeholder="Relay Address">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">DATA PACKET (MESSAGE)</label>
+                                <textarea class="form-input" rows="5"
+                                    placeholder="Enter transmission data..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-initialize" style="margin-top: 1rem;">
+                                <i class="fas fa-paper-plane"></i> SEND TRANSMISSION
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- COMM CENTER INFO -->
+                    <div class="uplink-info">
+                        <div class="info-block">
+                            <i class="fas fa-map-marker-alt icon-glow"></i>
+                            <h4 class="italic">BASE COORDINATES</h4>
+                            <p>88 Evolution Blvd, Future District<br>Sector 7, Grid 90210</p>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-envelope icon-glow"></i>
+                            <h4 class="italic">DIRECT LINE</h4>
+                            <p>command@neofit-systems.com<br>support@neofit-systems.com</p>
+                        </div>
+
+                        <!-- Radar Visual -->
+                        <div class="radar-visual">
+                            <div class="radar-scan"></div>
+                            <div class="radar-dot" style="top: 30%; left: 60%"></div>
+                            <div class="radar-dot" style="top: 70%; left: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROTOCOL DATABASE (FAQ) -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-title-center">
+                    <h2 class="italic">PROTOCOL DATABASE</h2>
+                    <p class="subtitle">Frequently accessed data files.</p>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Is NEOFIT suitable for beginners?</h4>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Affirmative. The AI Strategist calibrates intensity based on your biological baseline. We
+                                build you from the ground up.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What is the cancellation protocol?</h4>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You may disengage at any monthly interval. No locking mechanisms are deployed on standard
+                                contracts.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Do I need special gear?</h4>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Negative. While bio-wearables enhance data capture, the facility is fully equipped with
+                                all necessary hardware.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUCCESS MODAL (Reusable) -->
+        <div class="modal-overlay" id="successModal">
+            <div class="modal-content">
+                <div class="modal-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h2 class="italic">TRANSMISSION <span class="cyan-glow-text">SENT</span></h2>
+                <p>Command has received your data packet. Stand by for response within 24 operational hours.</p>
+                <button class="btn btn-initialize" id="closeModal">ACKNOWLEDGE</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-square"><i class="fas fa-dumbbell"></i></div>
+                        <div class="logo-text"><span class="neofit">NEOFIT</span></div>
+                    </a>
+                    <p class="footer-tagline">Synthesizing peak biology with advanced engineering. The final destination
+                        for high-performance evolution.</p>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="link-col">
+                        <h4 class="footer-title">NAVIGATION</h4>
+                        <a href="performance.html" class="nav-link-italic">PERFORMANCE LAB</a>
+                        <a href="team.html" class="nav-link-italic">ELITE TEAM</a>
+                        <a href="contact.html" class="nav-link-italic">UPLINK</a>
+                        <a href="index.html#pricing" class="nav-link-italic">MEMBERSHIPS</a>
+                    </div>
+                    <div class="link-col">
+                        <h4 class="footer-title">LEGAL</h4>
+                        <a href="#" class="nav-link-italic">PRIVACY PROTOCOL</a>
+                        <a href="#" class="nav-link-italic">TERMS OF SERVICE</a>
+                    </div>
+                    <div class="link-col">
+                        <h4 class="footer-title">LOCATION</h4>
+                        <p class="location-text">NEO-FIT HQ<br>88 Evolution Blvd,<br>Future District, 90210</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">&copy; 2026 NEO-FIT DYNAMICS INC. ALL RIGHTS RESERVED.</div>
+                <div class="credits">
+                    <span class="credit-dim">POWERED BY FRAME-MOTION</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple FAQ Toggle Script
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

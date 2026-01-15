@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiate Protocol | NEOFIT</title>
+    <meta name="description" content="Begin your evolution. Join the NEOFIT elite collective today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Syne:wght@700;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .join-hero {
+            padding-top: calc(var(--nav-height) + 60px);
+            padding-bottom: 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: radial-gradient(circle at 50% 10%, rgba(0, 229, 255, 0.05) 0%, transparent 40%);
+        }
+
+        .join-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .join-visual {
+            position: relative;
+        }
+
+        .join-visual::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border: 1px solid var(--primary-cyan);
+            border-radius: 30px;
+            opacity: 0.3;
+            z-index: -1;
+            transform: skewX(-5deg);
+        }
+
+        .join-content h1 {
+            font-size: 3.5rem;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .join-form-wrapper {
+            background: rgba(15, 15, 15, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .form-input {
+            width: 100%;
+            background: #050505;
+            border: 1px solid #333;
+            padding: 1rem;
+            border-radius: 12px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-cyan);
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+        }
+
+        .select-input {
+            appearance: none;
+            background-image: linear-gradient(45deg, transparent 50%, var(--primary-cyan) 50%),
+                linear-gradient(135deg, var(--primary-cyan) 50%, transparent 50%);
+            background-position: calc(100% - 20px) calc(50%),
+                calc(100% - 15px) calc(50%);
+            background-size: 5px 5px,
+                5px 5px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--primary-cyan);
+            color: black;
+            border: none;
+            border-radius: 12px;
+            font-weight: 900;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 1rem;
+        }
+
+        .btn-submit:hover {
+            box-shadow: 0 0 30px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+
+        .secure-note {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-dim);
+            font-size: 0.7rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+
+        .join-benefits {
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .benefit-item i {
+            color: var(--primary-cyan);
+        }
+
+        @media (max-width: 991px) {
+            .join-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .join-content {
+                text-align: center;
+            }
+
+            .join-form-wrapper {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION INTERFACE -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-square">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="neofit">NEOFIT</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="performance.html">PERFORMANCE</a>
+                <a href="team.html">ELITE TEAM</a>
+                <a href="contact.html">UPLINK</a>
+                <a href="index.html#ai-coach">AI COACH</a>
+                <a href="index.html#pricing">PLANS</a>
+            </nav>
+            <a href="join.html" class="btn btn-pill-white">JOIN THE MOVEMENT</a>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="join-hero">
+            <div class="container join-container">
+                <div class="join-content">
+                    <div class="performance-badge">
+                        <i class="fas fa-fingerprint"></i>
+                        <span>PROTOCOL INITIATION</span>
+                    </div>
+                    <h1 class="main-title italic">COMMIT TO<br><span class="cyan-glow-text">EVOLUTION.</span></h1>
+                    <p class="hero-description">
+                        You are one step away from the NEOFIT ecosystem. Complete your profile to secure your spot in
+                        the future of human performance.
+                    </p>
+
+                    <div class="join-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i> 24/7 Biometric Access
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i> AI Performance Tracking
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i> Global Hub Access
+                        </div>
+                    </div>
+                </div>
+
+                <div class="join-visual">
+                    <div class="join-form-wrapper">
+                        <form action="#" class="register-form">
+                            <div class="form-group">
+                                <label class="form-label">IDENTITY</label>
+                                <input type="text" class="form-input" placeholder="Full Legal Name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">COMMUNICATION UPLINK</label>
+                                <input type="email" class="form-input" placeholder="Email Address">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">ACCESS TIER</label>
+                                <select class="form-input select-input">
+                                    <option value="" disabled selected>Select Protocol</option>
+                                    <option value="active">Active ($59/mo)</option>
+                                    <option value="enhanced">Enhanced ($99/mo)</option>
+                                    <option value="supreme">Supreme ($189/mo)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-submit">INITIATE MEMBERSHIP</button>
+
+                            <div class="secure-note">
+                                <i class="fas fa-lock"></i>
+                                <span>256-BIT ENCRYPTED REGISTRATION</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SYSTEM FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-square"><i class="fas fa-dumbbell"></i></div>
+                        <div class="logo-text"><span class="neofit">NEOFIT</span></div>
+                    </a>
+                    <p class="footer-tagline">Synthesizing peak biology with advanced engineering. The final destination
+                        for high-performance evolution.</p>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="link-col">
+                        <h4 class="footer-title">NAVIGATION</h4>
+                        <a href="performance.html" class="nav-link-italic">PERFORMANCE LAB</a>
+                        <a href="team.html" class="nav-link-italic">ELITE TEAM</a>
+                        <a href="contact.html" class="nav-link-italic">UPLINK</a>
+                        <a href="index.html#ai-coach" class="nav-link-italic">AI OS</a>
+                        <a href="index.html#pricing" class="nav-link-italic">MEMBERSHIPS</a>
+                    </div>
+                    <div class="link-col">
+                        <h4 class="footer-title">LEGAL</h4>
+                        <a href="#" class="nav-link-italic">PRIVACY PROTOCOL</a>
+                        <a href="#" class="nav-link-italic">TERMS OF SERVICE</a>
+                    </div>
+                    <div class="link-col">
+                        <h4 class="footer-title">LOCATION</h4>
+                        <p class="location-text">NEO-FIT HQ<br>88 Evolution Blvd,<br>Future District, 90210</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">&copy; 2026 NEO-FIT DYNAMICS INC. ALL RIGHTS RESERVED.</div>
+                <div class="credits">
+                    <span class="credit-dim">POWERED BY FRAME-MOTION</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

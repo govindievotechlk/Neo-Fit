@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Program | NEOFIT</title>
+    <meta name="description" content="View the 12-week evolutionary protocol. The structure behind the results.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Syne:wght@700;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .program-hero {
+            padding-top: calc(var(--nav-height) + 80px);
+            padding-bottom: 80px;
+            text-align: center;
+        }
+
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .phase-card {
+            background: #0d0d0d;
+            border: 1px solid #222;
+            padding: 3rem 2rem;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .phase-card:hover {
+            border-color: var(--primary-cyan);
+            transform: translateY(-10px);
+        }
+
+        .phase-number {
+            font-family: 'Syne', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.05);
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            line-height: 1;
+        }
+
+        .phase-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .phase-duration {
+            color: var(--primary-cyan);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 2rem;
+        }
+
+        .phase-desc {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .schedule-section {
+            padding: 100px 0;
+            background: #080808;
+        }
+
+        .week-grid {
+            border: 1px solid #222;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 4rem;
+        }
+
+        .day-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            border-bottom: 1px solid #222;
+        }
+
+        .day-row:last-child {
+            border-bottom: none;
+        }
+
+        .day-header {
+            background: #111;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: white;
+            border-right: 1px solid #222;
+        }
+
+        .day-content {
+            padding: 2rem;
+            background: #0d0d0d;
+        }
+
+        .workout-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(0, 229, 255, 0.1);
+            color: var(--primary-cyan);
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .day-title {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .day-detail {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 991px) {
+            .phase-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .day-row {
+                grid-template-columns: 1fr;
+            }
+
+            .day-header {
+                border-right: none;
+                border-bottom: 1px solid #222;
+                padding: 1rem;
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION INTERFACE -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-square">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="neofit">NEOFIT</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="performance.html">PERFORMANCE</a>
+                <a href="team.html">ELITE TEAM</a>
+                <a href="contact.html">UPLINK</a>
+                <a href="index.html#ai-coach">AI COACH</a>
+                <a href="index.html#pricing">PLANS</a>
+            </nav>
+            <a href="join.html" class="btn btn-pill-white">JOIN THE MOVEMENT</a>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- PROGRAM HERO -->
+        <section class="program-hero">
+            <div class="container">
+                <div class="performance-badge">
+                    <i class="fas fa-layer-group"></i>
+                    <span>BLUEPRINT ACCESS</span>
+                </div>
+                <h1 class="massive-title italic">THE <br><span class="cyan-glow-text">PROGRAM</span></h1>
+                <p class="hero-description text-center" style="margin: 0 auto;">
+                    A 12-week evolutionary cycle designed to reconstruct your biological capabilities.
+                </p>
+
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">01</div>
+                        <h3 class="phase-title skew-italic">FOUNDATION</h3>
+                        <span class="phase-duration">WEEKS 1-4</span>
+                        <p class="phase-desc">Realigning kinetic chains and establishing neural pathways. Focus on form,
+                            mobility, and base strength.</p>
+                    </div>
+                    <div class="phase-card">
+                        <div class="phase-number">02</div>
+                        <h3 class="phase-title skew-italic">ACCELERATION</h3>
+                        <span class="phase-duration">WEEKS 5-8</span>
+                        <p class="phase-desc">Introducing high-intensity variable load. Hypertrophy focus with metabolic
+                            conditioning integration.</p>
+                    </div>
+                    <div class="phase-card">
+                        <div class="phase-number">03</div>
+                        <h3 class="phase-title skew-italic">PEAK</h3>
+                        <span class="phase-duration">WEEKS 9-12</span>
+                        <p class="phase-desc">Testing biological limits. max-effort outputs, plyometric power focus, and
+                            PR realization.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SAMPLE SCHEDULE -->
+        <section class="schedule-section">
+            <div class="container">
+                <div class="section-title-center">
+                    <h2 class="italic">MICRO-CYCLE VIEW</h2>
+                    <p class="subtitle">A typical Week 6 (Acceleration Phase) training split.</p>
+                </div>
+
+                <div class="week-grid">
+                    <div class="day-row">
+                        <div class="day-header">MON</div>
+                        <div class="day-content">
+                            <span class="workout-tag">LOWER BODY // POWER</span>
+                            <h4 class="day-title">Squat Mechanics & Chain Force</h4>
+                            <p class="day-detail">Primary Compound: Back Squat (5x5). Accessory: Lunges, Box Jumps.</p>
+                        </div>
+                    </div>
+                    <div class="day-row">
+                        <div class="day-header">TUE</div>
+                        <div class="day-content">
+                            <span class="workout-tag">UPPER BODY // HYPERTROPHY</span>
+                            <h4 class="day-title">Pressing Dynamics</h4>
+                            <p class="day-detail">Primary Compound: Bench Press (4x8). Accessory: Overhead Press, Rows.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="day-row">
+                        <div class="day-header">WED</div>
+                        <div class="day-content">
+                            <span class="workout-tag">ACTIVE RECOVERY</span>
+                            <h4 class="day-title">Neural Reset</h4>
+                            <p class="day-detail">Mobility flow, Zone 2 Cardio, Cryotherapy session.</p>
+                        </div>
+                    </div>
+                    <div class="day-row">
+                        <div class="day-header">THU</div>
+                        <div class="day-content">
+                            <span class="workout-tag">FULL BODY // METCON</span>
+                            <h4 class="day-title">System Shock</h4>
+                            <p class="day-detail">High intensity interval circuits featuring kettlebells and battle
+                                ropes.</p>
+                        </div>
+                    </div>
+                    <div class="day-row">
+                        <div class="day-header">FRI</div>
+                        <div class="day-content">
+                            <span class="workout-tag">ASSESSMENT</span>
+                            <h4 class="day-title">Data Capture</h4>
+                            <p class="day-detail">Weekly checkpoint: Body composition and neural reaction testing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="cta-overlay"></div>
+            <div class="container">
+                <div class="cta-content text-center" style="margin: 0 auto;">
+                    <h2 class="massive-title italic skew-italic">EXECUTE <br> THE PLAN.</h2>
+                    <div class="cta-footer" style="justify-content: center; margin-top: 2rem;">
+                        <a href="join.html" class="btn-join-elite">START WEEK 1 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-square"><i class="fas fa-dumbbell"></i></div>
+                        <div class="logo-text"><span class="neofit">NEOFIT</span></div>
+                    </a>
+                    <p class="footer-tagline">Synthesizing peak biology with advanced engineering. The final destination
+                        for high-performance evolution.</p>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="link-col">
+                        <h4 class="footer-title">NAVIGATION</h4>
+                        <a href="performance.html" class="nav-link-italic">PERFORMANCE LAB</a>
+                        <a href="team.html" class="nav-link-italic">ELITE TEAM</a>
+                        <a href="contact.html" class="nav-link-italic">UPLINK</a>
+                        <a href="index.html#ai-coach" class="nav-link-italic">AI OS</a>
+                        <a href="index.html#pricing" class="nav-link-italic">MEMBERSHIPS</a>
+                    </div>
+                    <div class="link-col">
+                        <h4 class="footer-title">LEGAL</h4>
+                        <a href="#" class="nav-link-italic">PRIVACY PROTOCOL</a>
+                        <a href="#" class="nav-link-italic">TERMS OF SERVICE</a>
+                    </div>
+                    <div class="link-col">
+                        <h4 class="footer-title">LOCATION</h4>
+                        <p class="location-text">NEO-FIT HQ<br>88 Evolution Blvd,<br>Future District, 90210</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">&copy; 2026 NEO-FIT DYNAMICS INC. ALL RIGHTS RESERVED.</div>
+                <div class="credits">
+                    <span class="credit-cyan">ENGINEERED BY GEMINI-3</span>
+                    <span class="credit-dim">POWERED BY FRAME-MOTION</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

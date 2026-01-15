@@ -63,4 +63,30 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Form Handling for Modal
+    const forms = document.querySelectorAll('form');
+    const modal = document.getElementById('successModal');
+    const closeModal = document.getElementById('closeModal');
+
+    if (modal && closeModal) {
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // Stop actual submission
+                modal.classList.add('active');
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+            window.location.href = 'index.html';
+        });
+
+        // Close on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    }
 });
