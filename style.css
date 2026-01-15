@@ -1423,19 +1423,50 @@ h3,
     }
 
     .hero-visual {
-        display: none;
+        display: block;
+        /* Show visual on mobile */
+        margin-top: 4rem;
+        width: 100%;
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    .hero-visual .card-floating {
+        transform: scale(0.8);
+        /* Scale down floating cards */
+    }
+
+    .card-bpm {
+        top: -10px;
+        right: -10px;
+    }
+
+    .card-rank {
+        left: -10px;
+        bottom: 10px;
     }
 
     .pricing-grid {
         grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     .hero h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .footer-top {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .card-bpm,
+    .card-rank {
+        display: none;
+        /* Hide floating cards on very small screens to save space */
     }
 }
 
