@@ -1418,6 +1418,12 @@ h3,
 
 /* Mobile Responsive */
 @media (max-width: 991px) {
+
+    /* Hide the CTA button in navbar to prevent overflow/overlap */
+    .navbar .btn-pill-white {
+        display: none;
+    }
+
     .hero .container {
         grid-template-columns: 1fr;
     }
@@ -1452,8 +1458,12 @@ h3,
         margin: 0 auto;
     }
 
-    .hero h1 {
-        font-size: 3.5rem;
+    /* Reduce title size significantly for mobile */
+    .hero h1,
+    .main-title {
+        font-size: 2.8rem;
+        word-wrap: break-word;
+        /* Ensure text wraps if it gets too long */
     }
 
     .footer-top {
@@ -1462,6 +1472,12 @@ h3,
 }
 
 @media (max-width: 480px) {
+
+    .hero h1,
+    .main-title {
+        font-size: 2.2rem;
+        /* Even smaller for very narrow screens */
+    }
 
     .card-bpm,
     .card-rank {
