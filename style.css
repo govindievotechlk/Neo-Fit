@@ -1240,7 +1240,7 @@ h3,
 
 @media (max-width: 991px) {
     .cta h2.massive-title.skew-italic {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .cta-footer {
@@ -1252,7 +1252,7 @@ h3,
 
 @media (max-width: 768px) {
     .cta h2.massive-title.skew-italic {
-        font-size: 3.2rem;
+        font-size: 2.2rem;
     }
 
     .cta-content {
@@ -1424,13 +1424,21 @@ h3,
     }
 
     .hero-visual {
+        display: block;
+        margin-top: 3rem;
+        order: 2;
+    }
+
+    .hero-visual .card-floating {
         display: none;
     }
 }
 
 @media (max-width: 991px) {
     .radar-visual {
-        display: none;
+        display: block;
+        margin: 2rem auto;
+        transform: scale(0.8);
     }
 
     .pricing-grid {
@@ -1445,7 +1453,7 @@ h3,
 }
 
 .hero h1 {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
 }
 
 .footer-top {
@@ -1466,7 +1474,7 @@ h3,
 
 .performance-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
     margin-top: 4rem;
 }
@@ -1596,7 +1604,7 @@ h3,
 
 .team-showcase-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
 }
 
@@ -2363,4 +2371,41 @@ h3,
 .modern-input:focus~.input-icon {
     opacity: 1;
     filter: drop-shadow(0 0 5px var(--primary-cyan));
+}
+
+/* Final Mobile Overrides */
+@media (max-width: 991px) {
+    .massive-title {
+        font-size: 2.8rem !important;
+    }
+
+    .section-title-center h2,
+    .pricing-title {
+        font-size: 2.5rem !important;
+    }
+
+    .hero-visual img,
+    .radar-visual img,
+    .coach-image img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Ensure no horizontal scroll */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .massive-title {
+        font-size: 2.2rem !important;
+    }
+
+    .section-title-center h2,
+    .pricing-title {
+        font-size: 2rem !important;
+    }
 }
