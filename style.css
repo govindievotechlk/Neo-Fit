@@ -1426,6 +1426,12 @@ h3,
     .hero-visual {
         display: none;
     }
+}
+
+@media (max-width: 991px) {
+    .radar-visual {
+        display: none;
+    }
 
     .pricing-grid {
         grid-template-columns: 1fr;
@@ -1436,21 +1442,26 @@ h3,
         /* Stack disciplines on mobile */
         height: auto;
     }
-
-    .hero h1 {
-        font-size: 3.2rem;
-    }
-
-    .footer-top {
-        grid-template-columns: 1fr;
-    }
 }
+
+.hero h1 {
+    font-size: 3.2rem;
+}
+
+.footer-top {
+    grid-template-columns: 1fr;
+}
+
 
 /* Performance Page Styles */
 .performance-hero {
     padding-top: calc(var(--nav-height) + 100px);
     padding-bottom: 100px;
     text-align: center;
+}
+
+.performance-hero .massive-title {
+    font-size: 3.5rem;
 }
 
 .performance-grid {
@@ -2294,7 +2305,62 @@ h3,
         grid-template-columns: 1fr;
     }
 
-    .radar-visual {
-        display: none;
-    }
+}
+
+
+/* Modern Input Styles */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: var(--primary-cyan);
+    opacity: 0.7;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.modern-input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-bottom: 2px solid #333;
+    border-radius: 4px 4px 0 0;
+    padding: 1rem 1rem 1rem 3rem;
+    /* Left padding space for icon */
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    /* More techy font */
+    letter-spacing: 0.05em;
+    transition: all 0.3s;
+}
+
+.modern-input:focus {
+    background: rgba(0, 229, 255, 0.05);
+    outline: none;
+}
+
+.input-border-effect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-cyan);
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px var(--primary-cyan);
+}
+
+.modern-input:focus~.input-border-effect {
+    width: 100%;
+}
+
+.modern-input:focus~.input-icon {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px var(--primary-cyan));
 }
